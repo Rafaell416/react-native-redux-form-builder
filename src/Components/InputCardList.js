@@ -41,7 +41,7 @@ export default class InputCardList extends Component {
       <ListView
         enableEmptySections = { true }
         dataSource={this.state.dataSource}
-        renderRow={(input) =>  <inputCard input={input} />}
+        renderRow={(input) =>  <InputCard input={input} />}
           removeClippedSubviews={false}
         />
     )

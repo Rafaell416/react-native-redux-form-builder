@@ -5,6 +5,7 @@ import {
   StyleSheet
 } from 'react-native'
 import FloatingButton from '../Containers/FloatingButton'
+import InputCardList from '../Components/InputCardList'
 
 
 export default class BuildScreen extends Component {
@@ -13,9 +14,19 @@ export default class BuildScreen extends Component {
   }
 
   render () {
+    const inputs = [
+      {
+        id: 1,
+        name: 'Rafa'
+      },
+      {
+        id: 2,
+        name: 'K<3'
+      }
+    ]
     return (
       <View style={styles.container}>
-        <Text>Hello Builder</Text>
+        <InputCardList inputs={inputs}/>
         <FloatingButton />
       </View>
     )

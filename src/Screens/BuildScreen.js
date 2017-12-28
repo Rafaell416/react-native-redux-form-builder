@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet
 } from 'react-native'
+import FloatingButton from '../Containers/FloatingButton'
 
 
 export default class BuildScreen extends Component {
@@ -15,6 +16,7 @@ export default class BuildScreen extends Component {
     return (
       <View style={styles.container}>
         <Text>Hello Builder</Text>
+        <FloatingButton />
       </View>
     )
   }
@@ -24,7 +26,5 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#9b59b6',
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
   }
 })

@@ -5,16 +5,14 @@ import {
   TouchableNativeFeedback
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
-import { connect } from 'react-redux'
-import { addInput } from '../Actions'
 
-class Button extends Component {
+
+export default class FloatingButton extends Component {
 
   _addInput = () => {
     let questionText = 'type a question here?'
     let questionType = 'yes/no'
-    let AddInput = this.props
-    AddInput(questionText, questionType)
+    this.props.addInput(questionText, questionType)
   }
 
   render () {
@@ -27,13 +25,6 @@ class Button extends Component {
     )
   }
 }
-
-const mapDispatchToProps = {
-  AddInput: addInput
-}
-
-const FloatingButton = connect(mapDispatchToProps)(Button)
-export default FloatingButton
 
 
 

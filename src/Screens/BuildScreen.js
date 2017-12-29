@@ -53,7 +53,8 @@ export default BuildScreen
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#9b59b6',
+    backgroundColor: 'white',
     flex: 1,
+    padding: 10
   }
 })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Tabs } from './src/Navigation/Router'
+import AppNavigation from './src/Navigation'
 import {applyMiddleware, createStore } from 'redux'
 import logger from 'redux-logger'
 import { Provider } from 'react-redux'
@@ -17,7 +17,7 @@ export default class App extends Component {
 
     return (
     <Provider store={store}>
-      <Tabs />
+      <AppNavigation />
     </Provider>
     )
   }

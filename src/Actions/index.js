@@ -1,5 +1,10 @@
-export const action = (param1, param2) => ({
-  type: 'ACTION_NAME',
-  param1,
-  param2
+import {v4} from 'uuid'
+
+export const addInput = (questionText, questionType) => ({
+  type: 'ADD_INPUT',
+  familyId: v4(),
+  id: v4(),
+  questionText,
+  questionType,
+  children: []
 })

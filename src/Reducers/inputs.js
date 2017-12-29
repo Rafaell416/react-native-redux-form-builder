@@ -11,6 +11,19 @@ const inputs = (state=[], action) => {
           children: action.children
         }
       ]
+    case 'UPDATE_INPUT_TEXT':
+      return state
+      // state.map(input =>
+      //   (input.id === action.id)
+      //   ? {
+      //       ...input,
+      //       questionText: action.newQuestionText
+      //     }
+      //   : input
+      // )
+    case 'DELETE_INPUT':
+      const inputId = action.id
+      return state.filter(input => input.id !== inputId)
     default:
       return state
   }

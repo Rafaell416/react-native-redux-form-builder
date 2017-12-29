@@ -8,3 +8,14 @@ export const addInput = (questionText, questionType) => ({
   questionType,
   children: []
 })
+
+export const updateInputText = (id, newQuestionText) => ({
+  type: 'UPDATE_INPUT_TEXT',
+  id,
+  newQuestionText
+})
+
+export const deleteInput = (id) => ({
+  type: 'DELETE_INPUT',
+  id
+})

@@ -7,7 +7,11 @@ import {
 import FloatingButton from '../Containers/FloatingButton'
 import InputCardList from '../Components/InputCardList'
 import { connect } from 'react-redux'
-import { addInput } from '../Actions'
+import {
+  addInput,
+  updateInputText,
+  deleteInput
+} from '../Actions'
 
 class Build extends Component {
   constructor(props){
@@ -17,7 +21,11 @@ class Build extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <InputCardList inputs={this.props.inputs}/>
+        <InputCardList
+          inputs={this.props.inputs}
+          updateInputText={this.props.updateInputText}
+          deleteInput={this.props.deleteInput}
+        />
         <FloatingButton
           addInput={this.props.addInput}
         />
@@ -31,7 +39,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  addInput
+  addInput,
+  updateInputText,
+  deleteInput
 }
 
 const BuildScreen = connect(

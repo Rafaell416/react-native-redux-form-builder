@@ -21,6 +21,9 @@ export default class InputCard extends Component {
   }
 
   render () {
+    const id = this.props.input.id
+    const updateInputText = this.props.updateInputText
+    const deleteInput = this.props.deleteInput
     return (
       <View style={styles.cardContainer}>
         <View style={styles.componentsContainer}>
@@ -29,6 +32,7 @@ export default class InputCard extends Component {
             <TextInput
               style={styles.questionInput}
               onChange={(text)=> this.setState({text})}
+              // onBlur={(text)=> updateInputText(id, text)}
               placeholder='Type a question..'
             />
           </View>
@@ -44,7 +48,7 @@ export default class InputCard extends Component {
               <Picker.Item label="Text" value="text" />
             </Picker>
           </View>
-          <TouchableNativeFeedback onPress={()=>console.warn('deleted')} >
+          <TouchableNativeFeedback onPress={()=>deleteInput(id)} >
             <Ionicons style={styles.deleteIcon} name="md-trash" size={20} color='#34495e'/>
           </TouchableNativeFeedback>
         </View>

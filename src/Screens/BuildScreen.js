@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import {
   addInput,
   updateInputText,
+  updateInputSelect,
   deleteInput
 } from '../Actions'
 
@@ -25,6 +26,7 @@ class Build extends Component {
           inputs={this.props.inputs}
           updateInputText={this.props.updateInputText}
           deleteInput={this.props.deleteInput}
+          updateInputSelect={this.props.updateInputSelect}
         />
         <FloatingButton
           addInput={this.props.addInput}
@@ -41,6 +43,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   addInput,
   updateInputText,
+  updateInputSelect,
   deleteInput
 }
 

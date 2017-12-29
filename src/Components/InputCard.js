@@ -24,6 +24,7 @@ export default class InputCard extends Component {
     const id = this.props.input.id
     const updateInputText = this.props.updateInputText
     const deleteInput = this.props.deleteInput
+    const updateInputSelect = this.props.updateInputSelect
     return (
       <View style={styles.cardContainer}>
         <View style={styles.componentsContainer}>
@@ -41,8 +42,8 @@ export default class InputCard extends Component {
             <Picker
               style={styles.picker}
               mode={'dropdown'}
-              selectedValue={this.state.language}
-              onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+              selectedValue={this.props.input.questionType}
+              onValueChange={(itemValue, itemIndex) => updateInputSelect(id, itemValue)}>
               <Picker.Item label="Yes/No" value="yes/no" />
               <Picker.Item label="Number" value="number" />
               <Picker.Item label="Text" value="text" />

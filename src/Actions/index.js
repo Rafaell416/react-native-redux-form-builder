@@ -15,6 +15,12 @@ export const updateInputText = (id, newQuestionText) => ({
   newQuestionText
 })
 
+export const updateInputSelect = (id, newQuestionType) => ({
+  type: 'UPDATE_INPUT_SELECT',
+  id,
+  newQuestionType
+})
+
 export const deleteInput = (id) => ({
   type: 'DELETE_INPUT',
   id

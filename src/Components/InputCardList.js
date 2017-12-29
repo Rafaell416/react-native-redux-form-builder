@@ -45,6 +45,7 @@ export default class InputCardList extends Component {
           <InputCard
             input={input}
             updateInputText={this.props.updateInputText}
+            updateInputSelect={this.props.updateInputSelect}
             deleteInput={this.props.deleteInput}
           />
         }

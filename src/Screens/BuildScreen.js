@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native'
 import FloatingButton from '../Containers/FloatingButton'
 import InputCardList from '../Components/InputCardList'
@@ -15,20 +15,9 @@ class Build extends Component {
   }
 
   render () {
-    const inputs = [
-      {
-        id: 1,
-        name: 'Rafa'
-      },
-      {
-        id: 2,
-        name: 'K<3'
-      }
-    ]
-
     return (
       <View style={styles.container}>
-        <InputCardList inputs={inputs}/>
+        <InputCardList inputs={this.props.inputs}/>
         <FloatingButton
           addInput={this.props.addInput}
         />

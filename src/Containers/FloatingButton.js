@@ -8,13 +8,13 @@ import { Ionicons } from '@expo/vector-icons'
 import { connect } from 'react-redux'
 import { addInput } from '../Actions'
 
-export default class FloatingButton extends Component {
+class Button extends Component {
 
   _addInput = () => {
     let questionText = 'type a question here?'
     let questionType = 'yes/no'
-    let dispatch = this.props.dispatch
-    dispatch(addInput(questionText, questionType))
+    let AddInput = this.props
+    AddInput(questionText, questionType)
   }
 
   render () {
@@ -27,6 +27,15 @@ export default class FloatingButton extends Component {
     )
   }
 }
+
+const mapDispatchToProps = {
+  AddInput: addInput
+}
+
+const FloatingButton = connect(mapDispatchToProps)(Button)
+export default FloatingButton
+
+
 
 const styles = StyleSheet.create({
   float:{
